@@ -24,15 +24,15 @@ public class C3P0Configure {
             dataSource.setJdbcUrl(environment.getProperty("db.c3p0.url"));
             dataSource.setUser(environment.getProperty("db.c3p0.username"));
             dataSource.setPassword(environment.getProperty("db.c3p0.password"));
-            dataSource.setAcquireIncrement(environment.getProperty("c3p0.acquireIncrement", int.class, 5));
-            dataSource.setInitialPoolSize(environment.getProperty("c3p0.initialPoolSize", int.class, 5));
-            dataSource.setMaxPoolSize(environment.getProperty("c3p0.maxPoolSize", int.class, 200));
-            dataSource.setMinPoolSize(environment.getProperty("c3p0.minPoolSize", int.class, 5));
-            dataSource.setMaxIdleTime(environment.getProperty("c3p0.maxIdleSize", int.class, 1800));
-            dataSource.setMaxIdleTimeExcessConnections(environment.getProperty("c3p0.maxIdleTimeExcessConnections", int.class, 1200));
-            dataSource.setMaxConnectionAge(environment.getProperty("c3p0.maxConnectionAge", int.class, 1000));
-            dataSource.setPreferredTestQuery(environment.getProperty("c3p0.preferredTestQuery", "select 1 from dual"));
-            dataSource.setIdleConnectionTestPeriod(environment.getProperty("c3p0.idleConnectionTestPeriod", int.class, 120));
+            dataSource.setAcquireIncrement(5);
+            dataSource.setInitialPoolSize(5);
+            dataSource.setMaxPoolSize(200);
+            dataSource.setMinPoolSize(5);
+            dataSource.setMaxIdleTime(1800);
+            dataSource.setMaxIdleTimeExcessConnections(1200);
+            dataSource.setMaxConnectionAge(1000);
+            dataSource.setPreferredTestQuery("select 1 from dual");
+            dataSource.setIdleConnectionTestPeriod(120);
             //当一个连接关闭时，如果有未提交的事务, C3P0默认的策略是回滚任何未提交的事务
             dataSource.setAutoCommitOnClose(false);
             return dataSource;
