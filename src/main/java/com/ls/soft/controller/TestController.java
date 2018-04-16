@@ -1,10 +1,11 @@
 package com.ls.soft.controller;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-@RestController
+@Controller
 @RequestMapping("test")
 public class TestController {
 
@@ -15,5 +16,14 @@ public class TestController {
 		
 		return m;
 	}
+	
+	@RequestMapping(value = "/test2", produces = { "application/json;charset=UTF-8" })
+	@ResponseBody
+	public String testController2(){
+		System.out.println(123);
+		
+		return "abc";
+	}
+	
 	
 }

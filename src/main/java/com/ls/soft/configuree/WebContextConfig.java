@@ -24,7 +24,7 @@ public class WebContextConfig  extends WebMvcConfigurerAdapter {
     */
    @Override
    public void addResourceHandlers(ResourceHandlerRegistry registry) {
-       registry.addResourceHandler( "/WEB-INF/static/**")
+       registry.addResourceHandler( "/static/**")
                .addResourceLocations("/WEB-INF/static/")
                .setCachePeriod(31556926);
    }
