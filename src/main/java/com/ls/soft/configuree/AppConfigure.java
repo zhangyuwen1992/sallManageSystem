@@ -24,9 +24,9 @@ import com.ls.soft.other.configure.MybatisConfig;
 // 启用注解事务，即可以使用@Transactional注解来控制事务
 @EnableTransactionManagement
 @ComponentScan(basePackages = "com.*", excludeFilters = { @Filter(value = Controller.class) })
- @Import({ C3P0Configure.class,MybatisConfig.class })
- @MapperScan(basePackages = { "com.***.dao" })
- @PropertySource("classpath:db.properties")
+@Import({ C3P0Configure.class, MybatisConfig.class })
+@MapperScan(basePackages = { "com.***.dao" })
+@PropertySource("classpath:db.properties")
 public class AppConfigure {
 
 	@Bean

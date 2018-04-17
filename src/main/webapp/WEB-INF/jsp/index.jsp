@@ -18,5 +18,6 @@
 	<p>如果您点击我，我会消失。</p>
 	<p>点击我，我会消失。</p>
 	<p>也要点击我哦。</p>
+	<input type="file" name="fieldName" multiple="multiple"/>
 </body>
 </html>
